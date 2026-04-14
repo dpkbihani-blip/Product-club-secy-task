@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StudyFlow — Feature Voting Board</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <span class="brand-icon">S</span>
+        <div>
+          <h1 class="brand-name">StudyFlow</h1>
+          <p class="brand-sub">Feature Voting Board</p>
+        </div>
+      </div>
+      <p class="header-desc">Vote on what we build next. Every vote shapes the roadmap.</p>
+    </div>
+  </header>
+
+  <main class="main-content">
+
+    <section class="stats-bar">
+      <div class="stat">
+        <span class="stat-num" id="total-votes">0</span>
+        <span class="stat-label">Total Votes</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num" id="feature-count">0</span>
+        <span class="stat-label">Features</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num" id="top-feature-votes">0</span>
+        <span class="stat-label">Top Feature Votes</span>
+      </div>
+    </section>
+
+    <section class="board-section">
+      <h2 class="section-title">Current Features</h2>
+      <p class="section-hint">Tap the arrow to upvote. Features re-rank instantly.</p>
+      <ul class="feature-list" id="feature-list" aria-label="Feature voting list"></ul>
+    </section>
+
+    <section class="submit-section">
+      <h2 class="section-title">Suggest a Feature</h2>
+      <p class="section-hint">Have an idea? Put it on the board.</p>
+      <div class="submit-form">
+        <input
+          type="text"
+          id="feature-input"
+          class="feature-input"
+          placeholder="Describe your feature idea..."
+          maxlength="120"
+          autocomplete="off"
+        />
+        <button class="submit-btn" id="submit-btn" aria-label="Submit feature idea">Add Feature</button>
+      </div>
+      <p class="char-count" id="char-count">0 / 120</p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Built for StudyFlow — a student productivity app</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
